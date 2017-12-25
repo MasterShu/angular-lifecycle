@@ -11,7 +11,27 @@
   <app-child [greeting]="greeting" [user]="user"></app-child>
 </div> -->
 <hr>
-<app-viewchild #child1></app-viewchild>
+<!-- <app-viewchild #child1></app-viewchild>
 <app-viewchild #child2></app-viewchild>
 <button (click)="child2.greeting('Jerry')">call child greeting function</button>
-{{message}}
+{{message}} -->
+<hr>
+
+<!-- 组件投影 -->
+<div class="wrapper">
+  <h2>parent component</h2>
+  <div>this div in parent component</div>
+  <app-contentchild>
+    <!-- 虽然属性是显示在子组件内, 但是属性必须使用父组件的,  -->
+    <div class="header">
+      this is header, the parent component projected , message is {{message}} 
+    </div>
+    <div class="footer">
+      this is footer, the parent component projected
+    </div>
+  </app-contentchild>
+</div>
+<!-- 另一方式来导入HTML -->
+<div [innerHTML]="htmlContent"></div>
+
+<hr>

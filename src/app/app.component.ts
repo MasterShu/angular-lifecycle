@@ -16,7 +16,7 @@ export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
   greeting = 'hello';
   user: {name: string} = {name: 'Jerry'};
   message: string = 'go ahead';
-
+  htmlContent = '<p>hello innerHTML </P>';
   ngOnInit() {
     // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     // Add 'implements OnInit' to the class.

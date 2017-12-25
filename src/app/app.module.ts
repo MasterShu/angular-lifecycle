@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LifeComponent } from './life/life.component';
 import { ChildComponent } from './child/child.component';
 import { ViewchildComponent } from './viewchild/viewchild.component';
+import { ContentchildComponent } from './contentchild/contentchild.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ViewchildComponent } from './viewchild/viewchild.component';
     AppComponent,
     LifeComponent,
     ChildComponent,
-    ViewchildComponent
+    ViewchildComponent,
+    ContentchildComponent
   ],
   imports: [
     BrowserModule,
