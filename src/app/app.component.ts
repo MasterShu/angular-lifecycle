@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, AfterViewChecked, AfterContentChecked, AfterContentInit } from '@angular/core';
 import { V4MAPPED } from 'dns';
 import { ViewchildComponent } from './viewchild/viewchild.component';
 
@@ -7,7 +7,7 @@ import { ViewchildComponent } from './viewchild/viewchild.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
+export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked, AfterContentChecked, AfterContentInit {
 
   @ViewChild('child1')
   child1: ViewchildComponent;
@@ -40,4 +40,13 @@ export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
   modifyMessage (): void {
     this.message = 'byebye';
   }
+
+  ngAfterContentInit(): void {
+    console.log('parent projected init done');
+    this.message = 'hello';
+  }
+  ngAfterContentChecked(): void {
+    console.log('parent projected checked done');
+  }
+
 }
