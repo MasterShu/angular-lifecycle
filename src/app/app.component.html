@@ -1,1 +1,11 @@
-<app-life [name]="name"></app-life>
+<!-- <app-life [name]="name"></app-life> -->
+<div class="parent">
+  <h2>parent</h2>
+  <div>
+    say <input type="text" [(ngModel)]="greeting">
+  </div>
+  <div>
+    name <input type="text" [(ngModel)]="user.name">
+  </div>
+  <app-child [greeting]="greeting" [user]="user"></app-child>
+</div>
