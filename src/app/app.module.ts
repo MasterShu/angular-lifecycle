@@ -6,13 +6,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LifeComponent } from './life/life.component';
 import { ChildComponent } from './child/child.component';
+import { ViewchildComponent } from './viewchild/viewchild.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LifeComponent,
-    ChildComponent
+    ChildComponent,
+    ViewchildComponent
   ],
   imports: [
     BrowserModule,

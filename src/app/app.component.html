@@ -1,5 +1,6 @@
 <!-- <app-life [name]="name"></app-life> -->
-<div class="parent">
+<!-- <hr> -->
+<!-- <div class="parent">
   <h2>parent</h2>
   <div>
     say <input type="text" [(ngModel)]="greeting">
@@ -8,4 +9,9 @@
     name <input type="text" [(ngModel)]="user.name">
   </div>
   <app-child [greeting]="greeting" [user]="user"></app-child>
-</div>
+</div> -->
+<hr>
+<app-viewchild #child1></app-viewchild>
+<app-viewchild #child2></app-viewchild>
+<button (click)="child2.greeting('Jerry')">call child greeting function</button>
+{{message}}

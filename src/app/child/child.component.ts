@@ -30,6 +30,7 @@ export class ChildComponent implements OnInit, OnChanges, DoCheck {
     console.log(JSON.stringify(changes, null, 2));
   }
 
+  // 变更检测一定要谨慎, 必须轻量级使用,
   ngDoCheck(): void {
     // tslint:disable-next-line:max-line-length
     // Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
